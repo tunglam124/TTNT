@@ -1,0 +1,7 @@
+Thuật toán,Số cụm,Nhiễu(%),Silhouette,Davies-Bouldin,Calinski-Harabasz,Dunn,Nhận xét
+K-Means,3,0.0,0.39,1.055,1755.7,0.006,<< Đề xuất: cân bằng tốt nhất giữa các chỉ số
+Spectral Clustering,3,0.0,0.302,1.472,1238.0,0.158,
+Mean Shift,2,0.0,0.39,1.082,2001.1,0.009,
+GMM,3,0.0,0.302,1.472,1238.0,0.158,
+DBSCAN,6,0.1,0.27,1.896,509.7,0.094,
+FCM,3,0.0,0.274,1.213,1540.2,0.001,

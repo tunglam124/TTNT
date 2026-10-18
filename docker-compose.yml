@@ -1,0 +1,14 @@
+services:
+  ai-customer-system:
+    build: .
+    container_name: customer_ai_system
+    ports:
+      - "8000:8000"  # FastAPI Swagger UI: http://localhost:8000/docs
+      - "8501:8501"  # Streamlit Dashboard: http://localhost:8501
+    environment:
+      - DATA_PATH=/app/data/transactions.csv
+      - ARTIFACTS_DIR=/app/artifacts
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    volumes:
+      - ./artifacts:/app/artifacts
+    restart: unless-stopped

@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Caches & Test
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Environments & Dependencies
+.venv/
+venv/
+env/
+ENV/
+
+# Secret & Environment Variables (DO NOT COMMIT SECRETS)
+.env
+*.env
+!.env.example
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Jupyter Notebook checkpoints & backups
+.ipynb_checkpoints/
+rfm_kmeans_pipeline_generic_backup.ipynb
+
+# Data files (keep repository light, raw data should be placed locally or downloaded)
+*.csv.gz
+*.zip
+*.tar.gz
+
+# Model Artifacts: ignore old runs, keep latest run (run_20261017_193914) & LATEST pointer
+artifacts/models/run_20261013_080550/
+artifacts/models/run_20261017_192530/
+artifacts/models/run_20261017_193023/

@@ -1,0 +1,634 @@
+{
+  "created_at": "2026-10-17T19:39:14",
+  "source": "upload",
+  "data": {
+    "rows": 541909,
+    "customers": 4372,
+    "transactions": 25900,
+    "date_min": "2010-12-01",
+    "date_max": "2011-12-09",
+    "shared_transaction_pct": 0.0,
+    "missing_pct": {
+      "PRODUCT": 0.27,
+      "CUSTOMER_ID": 24.93
+    },
+    "encoding": "cp1252",
+    "duplicate_label_columns": []
+  },
+  "mapping": {
+    "customer_id": "CustomerID",
+    "transaction_id": "InvoiceNo",
+    "date": "InvoiceDate",
+    "quantity": "Quantity",
+    "unit_price": "UnitPrice",
+    "amount": null,
+    "category": null,
+    "product": "Description",
+    "channel": null,
+    "profit": null,
+    "discount": null
+  },
+  "label_columns": [],
+  "frequency_by_days": false,
+  "snapshot_date": "2011-12-09",
+  "k": 2,
+  "best_k_silhouette": 2,
+  "k_search": [
+    {
+      "k": 2,
+      "wcss": 6433.428219355421,
+      "silhouette": 0.4329203200012547,
+      "davies_bouldin": 0.890627720739891,
+      "calinski_harabasz": 4435.171772808506
+    },
+    {
+      "k": 3,
+      "wcss": 4822.735711267033,
+      "silhouette": 0.33564079575791195,
+      "davies_bouldin": 1.0510773165138227,
+      "calinski_harabasz": 3681.4350853029773
+    },
+    {
+      "k": 4,
+      "wcss": 3884.4198913649466,
+      "silhouette": 0.3363085795773714,
+      "davies_bouldin": 1.0128579077762345,
+      "calinski_harabasz": 3395.429486350233
+    },
+    {
+      "k": 5,
+      "wcss": 3254.1942985221826,
+      "silhouette": 0.3161197420725372,
+      "davies_bouldin": 0.9920574424719533,
+      "calinski_harabasz": 3248.9699888927858
+    },
+    {
+      "k": 6,
+      "wcss": 2806.4429964301435,
+      "silhouette": 0.31284771952304113,
+      "davies_bouldin": 1.0161868645658416,
+      "calinski_harabasz": 3151.3040447254243
+    },
+    {
+      "k": 7,
+      "wcss": 2506.691872159393,
+      "silhouette": 0.3094503857299556,
+      "davies_bouldin": 0.9792620268425459,
+      "calinski_harabasz": 3025.7425429818127
+    },
+    {
+      "k": 8,
+      "wcss": 2296.01718074421,
+      "silhouette": 0.3031009320699962,
+      "davies_bouldin": 0.9923192614694976,
+      "calinski_harabasz": 2887.56150728094
+    }
+  ],
+  "segmentation_metrics": {
+    "silhouette": 0.4329203200012547,
+    "davies_bouldin": 0.890627720739891,
+    "calinski_harabasz": 4435.171772808506
+  },
+  "segment_thresholds": {
+    "recency_p33": 25.0,
+    "frequency_mean": 4.272014753342554,
+    "monetary_mean": 1592.4239251267863
+  },
+  "segment_profile": [
+    {
+      "Segment": "At-Risk Customers",
+      "customers": 1677,
+      "recency_mean": 26.332,
+      "frequency_mean": 8.414,
+      "monetary_mean": 3332.838,
+      "monetary_total": 5589170.086,
+      "customer_pct": 38.658,
+      "revenue_pct": 80.909,
+      "aov_mean": 490.453,
+      "category_count_mean": 112.677,
+      "top_category": "POSTAGE",
+      "churn_prob_mean": 0.154,
+      "pred_value_90d_mean": 2034.77,
+      "radar_recency": 73.067,
+      "radar_frequency": 78.424,
+      "radar_monetary": 77.485,
+      "radar_aov": 60.222,
+      "radar_diversity": 72.049
+    },
+    {
+      "Segment": "Lost Customers",
+      "customers": 2661,
+      "recency_mean": 134.259,
+      "frequency_mean": 1.662,
+      "monetary_mean": 495.59,
+      "monetary_total": 1318764.901,
+      "customer_pct": 61.342,
+      "revenue_pct": 19.091,
+      "aov_mean": 325.951,
+      "category_count_mean": 29.81,
+      "top_category": "POSTAGE",
+      "churn_prob_mean": 0.578,
+      "pred_value_90d_mean": 376.212,
+      "radar_recency": 35.444,
+      "radar_frequency": 32.105,
+      "radar_monetary": 32.697,
+      "radar_aov": 43.577,
+      "radar_diversity": 36.123
+    }
+  ],
+  "segment_migration": {
+    "available": true,
+    "cutoff_date": "2011-09-11",
+    "snapshot_date": "2011-12-10",
+    "horizon_days": 90,
+    "flows": [
+      {
+        "source": "At-Risk Customers",
+        "target": "At-Risk Customers",
+        "customers": 936,
+        "pct_of_source": 87.8,
+        "revenue": 4412089.99
+      },
+      {
+        "source": "At-Risk Customers",
+        "target": "Lost Customers",
+        "customers": 130,
+        "pct_of_source": 12.2,
+        "revenue": 145430.72
+      },
+      {
+        "source": "Khách mới (trong kỳ)",
+        "target": "At-Risk Customers",
+        "customers": 177,
+        "pct_of_source": 18.4,
+        "revenue": 272505.83
+      },
+      {
+        "source": "Khách mới (trong kỳ)",
+        "target": "Lost Customers",
+        "customers": 785,
+        "pct_of_source": 81.6,
+        "revenue": 323037.12
+      },
+      {
+        "source": "Lost Customers",
+        "target": "At-Risk Customers",
+        "customers": 564,
+        "pct_of_source": 24.4,
+        "revenue": 904574.27
+      },
+      {
+        "source": "Lost Customers",
+        "target": "Lost Customers",
+        "customers": 1746,
+        "pct_of_source": 75.6,
+        "revenue": 850297.06
+      }
+    ],
+    "summary": {
+      "total_customers": 4338,
+      "new_customers": 962,
+      "existing_customers": 3376,
+      "retained_same_segment": 2682,
+      "slipped_to_risk_or_lost": 0,
+      "reactivated_won_back": 0
+    }
+  },
+  "market_basket": {
+    "available": true,
+    "item_col": "PRODUCT",
+    "top_rules": [
+      {
+        "antecedent": "REGENCY TEAPOT ROSES ",
+        "consequent": "ROSES REGENCY TEACUP AND SAUCER ",
+        "pair_customers": 185,
+        "support": 0.0426,
+        "confidence": 0.746,
+        "lift": 7.65,
+        "top_products": []
+      },
+      {
+        "antecedent": "ROSES REGENCY TEACUP AND SAUCER ",
+        "consequent": "REGENCY TEAPOT ROSES ",
+        "pair_customers": 185,
+        "support": 0.0426,
+        "confidence": 0.4374,
+        "lift": 7.65,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "consequent": "JUMBO BAG STRAWBERRY",
+        "pair_customers": 152,
+        "support": 0.035,
+        "confidence": 0.4967,
+        "lift": 6.841,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG STRAWBERRY",
+        "consequent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "pair_customers": 152,
+        "support": 0.035,
+        "confidence": 0.4825,
+        "lift": 6.841,
+        "top_products": []
+      },
+      {
+        "antecedent": "GIN + TONIC DIET METAL SIGN",
+        "consequent": "PLEASE ONE PERSON METAL SIGN",
+        "pair_customers": 187,
+        "support": 0.0431,
+        "confidence": 0.5667,
+        "lift": 6.809,
+        "top_products": []
+      },
+      {
+        "antecedent": "PLEASE ONE PERSON METAL SIGN",
+        "consequent": "GIN + TONIC DIET METAL SIGN",
+        "pair_customers": 187,
+        "support": 0.0431,
+        "confidence": 0.518,
+        "lift": 6.809,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG STRAWBERRY",
+        "consequent": "JUMBO BAG PINK POLKADOT",
+        "pair_customers": 182,
+        "support": 0.042,
+        "confidence": 0.5778,
+        "lift": 6.738,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG PINK POLKADOT",
+        "consequent": "JUMBO BAG STRAWBERRY",
+        "pair_customers": 182,
+        "support": 0.042,
+        "confidence": 0.4892,
+        "lift": 6.738,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "consequent": "JUMBO BAG PINK POLKADOT",
+        "pair_customers": 163,
+        "support": 0.0376,
+        "confidence": 0.5327,
+        "lift": 6.212,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG PINK POLKADOT",
+        "consequent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "pair_customers": 163,
+        "support": 0.0376,
+        "confidence": 0.4382,
+        "lift": 6.212,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG STRAWBERRY",
+        "consequent": "JUMBO BAG APPLES",
+        "pair_customers": 155,
+        "support": 0.0357,
+        "confidence": 0.4921,
+        "lift": 6.205,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG APPLES",
+        "consequent": "JUMBO BAG STRAWBERRY",
+        "pair_customers": 155,
+        "support": 0.0357,
+        "confidence": 0.4506,
+        "lift": 6.205,
+        "top_products": []
+      },
+      {
+        "antecedent": "ROUND SNACK BOXES SET OF4 WOODLAND ",
+        "consequent": "SPACEBOY LUNCH BOX ",
+        "pair_customers": 126,
+        "support": 0.029,
+        "confidence": 0.4484,
+        "lift": 6.041,
+        "top_products": []
+      },
+      {
+        "antecedent": "SPACEBOY LUNCH BOX ",
+        "consequent": "ROUND SNACK BOXES SET OF4 WOODLAND ",
+        "pair_customers": 126,
+        "support": 0.029,
+        "confidence": 0.3913,
+        "lift": 6.041,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG APPLES",
+        "consequent": "JUMBO BAG ALPHABET",
+        "pair_customers": 187,
+        "support": 0.0431,
+        "confidence": 0.5436,
+        "lift": 5.955,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG ALPHABET",
+        "consequent": "JUMBO BAG APPLES",
+        "pair_customers": 187,
+        "support": 0.0431,
+        "confidence": 0.4722,
+        "lift": 5.955,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG APPLES",
+        "consequent": "JUMBO BAG PINK POLKADOT",
+        "pair_customers": 168,
+        "support": 0.0387,
+        "confidence": 0.4884,
+        "lift": 5.695,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG PINK POLKADOT",
+        "consequent": "JUMBO BAG APPLES",
+        "pair_customers": 168,
+        "support": 0.0387,
+        "confidence": 0.4516,
+        "lift": 5.695,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "consequent": "JUMBO BAG APPLES",
+        "pair_customers": 137,
+        "support": 0.0316,
+        "confidence": 0.4477,
+        "lift": 5.646,
+        "top_products": []
+      },
+      {
+        "antecedent": "JUMBO BAG APPLES",
+        "consequent": "JUMBO  BAG BAROQUE BLACK WHITE",
+        "pair_customers": 137,
+        "support": 0.0316,
+        "confidence": 0.3983,
+        "lift": 5.646,
+        "top_products": []
+      }
+    ],
+    "segment_top_items": {
+      "At-Risk Customers": [
+        {
+          "item": "PAPER CRAFT , LITTLE BIRDIE",
+          "customers": 1,
+          "revenue_pct": 2.2,
+          "sample_products": []
+        },
+        {
+          "item": "REGENCY CAKESTAND 3 TIER",
+          "customers": 534,
+          "revenue_pct": 1.7,
+          "sample_products": []
+        },
+        {
+          "item": "WHITE HANGING HEART T-LIGHT HOLDER",
+          "customers": 494,
+          "revenue_pct": 1.2,
+          "sample_products": []
+        },
+        {
+          "item": "JUMBO BAG RED RETROSPOT",
+          "customers": 438,
+          "revenue_pct": 1.0,
+          "sample_products": []
+        },
+        {
+          "item": "POSTAGE",
+          "customers": 164,
+          "revenue_pct": 0.8,
+          "sample_products": []
+        }
+      ],
+      "Lost Customers": [
+        {
+          "item": "MEDIUM CERAMIC TOP STORAGE JAR",
+          "customers": 47,
+          "revenue_pct": 5.7,
+          "sample_products": []
+        },
+        {
+          "item": "REGENCY CAKESTAND 3 TIER",
+          "customers": 347,
+          "revenue_pct": 1.3,
+          "sample_products": []
+        },
+        {
+          "item": "POSTAGE",
+          "customers": 167,
+          "revenue_pct": 1.0,
+          "sample_products": []
+        },
+        {
+          "item": "WHITE HANGING HEART T-LIGHT HOLDER",
+          "customers": 362,
+          "revenue_pct": 0.9,
+          "sample_products": []
+        },
+        {
+          "item": "PARTY BUNTING",
+          "customers": 277,
+          "revenue_pct": 0.7,
+          "sample_products": []
+        }
+      ]
+    },
+    "global_top_items": [
+      {
+        "item": "PAPER CRAFT , LITTLE BIRDIE",
+        "customers": 1,
+        "support": 0.0002,
+        "revenue": 168469.6,
+        "revenue_pct": 1.9
+      },
+      {
+        "item": "REGENCY CAKESTAND 3 TIER",
+        "customers": 881,
+        "support": 0.2031,
+        "revenue": 142264.75,
+        "revenue_pct": 1.6
+      },
+      {
+        "item": "WHITE HANGING HEART T-LIGHT HOLDER",
+        "customers": 856,
+        "support": 0.1973,
+        "revenue": 100392.1,
+        "revenue_pct": 1.13
+      },
+      {
+        "item": "JUMBO BAG RED RETROSPOT",
+        "customers": 635,
+        "support": 0.1464,
+        "revenue": 85040.54,
+        "revenue_pct": 0.96
+      },
+      {
+        "item": "MEDIUM CERAMIC TOP STORAGE JAR",
+        "customers": 138,
+        "support": 0.0318,
+        "revenue": 81416.73,
+        "revenue_pct": 0.92
+      },
+      {
+        "item": "POSTAGE",
+        "customers": 331,
+        "support": 0.0763,
+        "revenue": 77803.96,
+        "revenue_pct": 0.88
+      },
+      {
+        "item": "PARTY BUNTING",
+        "customers": 708,
+        "support": 0.1632,
+        "revenue": 68785.23,
+        "revenue_pct": 0.77
+      },
+      {
+        "item": "ASSORTED COLOUR BIRD ORNAMENT",
+        "customers": 678,
+        "support": 0.1563,
+        "revenue": 56413.03,
+        "revenue_pct": 0.63
+      },
+      {
+        "item": "Manual",
+        "customers": 197,
+        "support": 0.0454,
+        "revenue": 53419.93,
+        "revenue_pct": 0.6
+      },
+      {
+        "item": "RABBIT NIGHT LIGHT",
+        "customers": 450,
+        "support": 0.1037,
+        "revenue": 51251.24,
+        "revenue_pct": 0.58
+      },
+      {
+        "item": "CHILLI LIGHTS",
+        "customers": 205,
+        "support": 0.0473,
+        "revenue": 46265.11,
+        "revenue_pct": 0.52
+      },
+      {
+        "item": "PAPER CHAIN KIT 50'S CHRISTMAS ",
+        "customers": 613,
+        "support": 0.1413,
+        "revenue": 42584.13,
+        "revenue_pct": 0.48
+      },
+      {
+        "item": "PICNIC BASKET WICKER 60 PIECES",
+        "customers": 1,
+        "support": 0.0002,
+        "revenue": 39619.5,
+        "revenue_pct": 0.45
+      },
+      {
+        "item": "BLACK RECORD COVER FRAME",
+        "customers": 140,
+        "support": 0.0323,
+        "revenue": 39045.8,
+        "revenue_pct": 0.44
+      },
+      {
+        "item": "JUMBO BAG PINK POLKADOT",
+        "customers": 372,
+        "support": 0.0858,
+        "revenue": 37254.36,
+        "revenue_pct": 0.42
+      }
+    ]
+  },
+  "algorithm_comparison": [
+    {
+      "algorithm": "K-Means",
+      "n_clusters": 2,
+      "noise_pct": 0.0,
+      "silhouette": 0.4325426273959226,
+      "davies_bouldin": 0.8907053800662534,
+      "calinski_harabasz": 3088.619095682839,
+      "dunn": 0.008223303921162092,
+      "recommended": true
+    },
+    {
+      "algorithm": "GMM",
+      "n_clusters": 2,
+      "noise_pct": 0.0,
+      "silhouette": 0.28134733191034533,
+      "davies_bouldin": 1.0700935608320585,
+      "calinski_harabasz": 1562.3294653457156,
+      "dunn": 0.06875733641825629,
+      "recommended": false
+    },
+    {
+      "algorithm": "Fuzzy C-Means",
+      "n_clusters": 2,
+      "noise_pct": 0.0,
+      "silhouette": 0.4306641343824172,
+      "davies_bouldin": 0.893929805648903,
+      "calinski_harabasz": 3081.478619587742,
+      "dunn": 0.005326607502475319,
+      "recommended": false
+    },
+    {
+      "algorithm": "DBSCAN",
+      "n_clusters": 2,
+      "noise_pct": 1.6666666666666667,
+      "silhouette": 0.287925136590466,
+      "davies_bouldin": 1.0623199409028703,
+      "calinski_harabasz": 1611.328947773594,
+      "dunn": 0.08480305582219656,
+      "recommended": false
+    },
+    {
+      "algorithm": "Spectral Clustering",
+      "n_clusters": 2,
+      "noise_pct": 0.0,
+      "silhouette": 0.28263240198346046,
+      "davies_bouldin": 1.0563092519948436,
+      "calinski_harabasz": 1587.4930903987783,
+      "dunn": 0.0054354928533116575,
+      "recommended": false
+    },
+    {
+      "algorithm": "Mean Shift",
+      "n_clusters": 1,
+      "noise_pct": 0.0,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "dunn": NaN,
+      "recommended": false
+    }
+  ],
+  "predictor_metrics": {
+    "cutoff": "2011-09-11",
+    "horizon_days": 90,
+    "train_customers": 2700,
+    "test_customers": 676,
+    "churn_rate": 0.4318720379146919,
+    "churn_auc": 0.723931578196347,
+    "churn_pr_auc": 0.6239338121190097,
+    "churn_accuracy": 0.6701183431952663,
+    "churn_baseline_accuracy": 0.5680473372781065,
+    "value_mae": 708.3267526830118,
+    "value_baseline_mae": 1042.3673409566077,
+    "churn_reliable": true,
+    "value_reliable": true
+  },
+  "predictor_error": null
+}
